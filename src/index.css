@@ -1,3 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Tan Pearl";
+  src: url("./assets/fonts/tan-pearl.otf") format("opentype");
+}
+
+@layer components {
+  h1,
+  h2,
+  h3 {
+    @apply font-luxury font-extralight;
+  }
+  *,
+  p,
+  h4,
+  h5,
+  h6,
+  a,
+  button,
+  span,
+  li {
+    @apply font-body;
+  }
+
+  .filter-black {
+    filter: brightness(0) saturate(100%) invert(3%) sepia(17%) saturate(7030%)
+      hue-rotate(273deg) brightness(105%) contrast(105%);
+  }
+
+  .filter-white {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%)
+      hue-rotate(0deg) brightness(100%) contrast(100%);
+  }
+}
