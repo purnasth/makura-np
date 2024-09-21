@@ -8,7 +8,7 @@ import Footer from "./components/ui/Footer";
 import InstagramWall from "./components/ui/InstagramWall";
 import VideoPlayer from "./components/VideoPlayer";
 
-import makuraVideo from "./assets/video/makura.mp4";
+// import makuraVideo from "./assets/video/makura.mp4";
 import makuraVideo2 from "./assets/video/makuraa2.mp4";
 
 const App: React.FC = () => {
@@ -18,8 +18,8 @@ const App: React.FC = () => {
       <Navbar />
       <VideoPlayer
         poster={img1}
-        video={makuraVideo}
-        videoClassName="w-full h-80 sm:h-[50vh] sm:min-h-96 lg:h-[36rem] xl:h-[110vh] object-cover z-10"
+        video={makuraVideo2}
+        videoClassName="w-full h-80 sm:h-[50vh] sm:min-h-96 lg:h-[36rem] xl:h-[115vh] 2xl:h-[115vh] object-cover z-10"
       />
       <About />
       <InstagramWall />
