@@ -15,7 +15,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
 
   return (
     <section className="relative">
-      <div className="pointer-events-none absolute inset-0 size-full bg-gradient-to-b from-black/60 to-black/40 z-0 opacity-90 mix-blend-darken" />
+      {/* <div className="pointer-events-none absolute inset-0 size-full bg-gradient-to-b from-black/60 to-black/40 z-0 opacity-90 mix-blend-darken" /> */}
       <video
         ref={videoRef}
         className={`${videoClassName}`}
