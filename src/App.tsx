@@ -5,6 +5,7 @@ import About from "./components/About";
 
 import img1 from "./assets/img1.jpg";
 import Footer from "./components/ui/Footer";
+import InstagramWall from "./components/ui/InstagramWall";
 
 const App: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const App: React.FC = () => {
         <img src={img1} alt="" className="size-full object-contain bg-black" />
       </section>
       <About />
+      <InstagramWall />
 
       <Footer />
     </>
