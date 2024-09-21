@@ -15,6 +15,26 @@
     width: 0em;
   }
 
+  .scroll::-webkit-scrollbar {
+    @apply w-1/2 h-2 rounded-full max-w-sm;
+  }
+
+  .scroll::-webkit-scrollbar-thumb {
+    @apply bg-dark/90 rounded-full border border-solid border-dark/60;
+  }
+
+  .scroll::-webkit-scrollbar-thumb:hover {
+    @apply bg-dark/50;
+  }
+
+  .scroll::-webkit-scrollbar-track {
+    @apply bg-dark/20 rounded-full w-1/2 max-w-sm;
+  }
+
+  .scroll::-webkit-scrollbar-button {
+    @apply mx-24;
+  }
+
   h1,
   h2,
   h3 {
