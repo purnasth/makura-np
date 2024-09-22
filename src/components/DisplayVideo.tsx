@@ -98,7 +98,7 @@ const DisplayVideo: React.FC<DisplayVideoProps> = ({
   };
 
   return (
-    <section className="relative group w-screen overflow-hidden">
+    <section className="relative group max-w-[100vw] overflow-hidden">
       <video
         ref={videoRef}
         className={`${videoClassName}`}
@@ -114,7 +114,7 @@ const DisplayVideo: React.FC<DisplayVideoProps> = ({
         Your browser does not support the video tag.
       </video>
 
-      <div className="absolute inset-0 h-screen flex items-end justify-center flex-col space-y-2 md:space-y-4 p-2 md:p-4 translate-x-24 group-hover:translate-x-0 transition-all duration-500 z-20">
+      <div className="absolute top-0 right-0 w-fit h-screen flex items-end justify-center flex-col space-y-2 md:space-y-4 p-2 md:p-4 translate-x-24 group-hover:translate-x-0 transition-all duration-500 z-20">
         <button
           onClick={togglePlayPause}
           className="bg-black/20 hover:bg-light/20 backdrop-blur outline outline-1 outline-light/30 hover-outline text-light/80 hover:text-light text-base md:text-2xl px-3 py-1 rounded-full transition-all duration-300"

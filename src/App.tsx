@@ -30,7 +30,7 @@ const App: React.FC = () => {
           <span className="text-sm md:text-base uppercase opacity-90">
             Makura
           </span>
-          <h2 className="text-xl md:text-5xl text-light mx-8 md:mx-0 leading-relaxed shadow text-center">
+          <h2 className="text-xl md:text-5xl text-light text-shadow-dark-glow mx-8 md:mx-0 leading-relaxed text-center">
             Wear the Spirit with Makura
           </h2>
           <div className="w-px h-10 md:h-28 bg-light/50 bottom-0"></div>

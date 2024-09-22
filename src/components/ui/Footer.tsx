@@ -72,7 +72,7 @@ const Footer: React.FC = () => {
                 <li>
                   <a
                     href="/"
-                    className="text-light text-sm uppercase font-luxury"
+                    className="text-light text-sm uppercase font-luxury tracking-widest"
                   >
                     Watch
                   </a>
@@ -80,7 +80,7 @@ const Footer: React.FC = () => {
                 <li>
                   <a
                     href="/"
-                    className="text-light text-sm uppercase font-luxury"
+                    className="text-light text-sm uppercase font-luxury tracking-widest"
                   >
                     Products
                   </a>
@@ -88,7 +88,7 @@ const Footer: React.FC = () => {
                 <li>
                   <a
                     href="/"
-                    className="text-light text-sm uppercase font-luxury"
+                    className="text-light text-sm uppercase font-luxury tracking-widest"
                   >
                     Offers
                   </a>
@@ -96,7 +96,7 @@ const Footer: React.FC = () => {
                 <li>
                   <a
                     href="/"
-                    className="text-light text-sm uppercase font-luxury"
+                    className="text-light text-sm uppercase font-luxury tracking-widest"
                   >
                     Gallery
                   </a>
@@ -179,7 +179,7 @@ const Footer: React.FC = () => {
           ></track>
           Your browser does not support the video tag.
         </video>
-        <h2 className="absolute text-3xl text-light">
+        <h2 className="absolute text-3xl text-white text-shadow-light-glow">
           Makura Proudly Made in Nepal
         </h2>
       </section>

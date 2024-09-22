@@ -11,11 +11,21 @@
 
 @layer components {
 
-  ::-webkit-scrollbar {
-    width: 0em;
+  * {
+    scrollbar-width: thin;
   }
 
-  .scroll::-webkit-scrollbar {
+  html {
+    scrollbar-width: none !important;
+  }
+
+  .scroll {
+    scrollbar-width: thin;
+    scrollbar-color: #000111 #00011115;
+  }
+
+
+  /* .scroll::-webkit-scrollbar {
     @apply w-1/2 h-2 rounded-full max-w-sm;
   }
 
@@ -33,7 +43,7 @@
 
   .scroll::-webkit-scrollbar-button {
     @apply mx-24;
-  }
+  } */
 
   h1,
   h2,

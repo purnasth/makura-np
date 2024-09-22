@@ -17,6 +17,13 @@ export default {
         body: ["Titillium Web", "sans-serif"],
         luxury: ["Tan Pearl", "sans-serif"],
       },
+      textShadow: {
+        dark: "0 20px 20px rgba(0, 0, 0, 0.5)",
+        light: "0 2px 5px rgba(255, 255, 255, 0.5)",
+        red: "2px 2px 4px rgba(255, 0, 0, 0.5)",
+        "light-glow": "1px 1px 2px #F8F8FF,  0 0 1em #F8F8FF, 0 0 0.2em #F8F8FF",
+        "dark-glow": "1px 1px 2px #000111,  0 0 1em #000111, 0 0 0.2em #000111",
+      },
     },
     screens: {
       sm: "640px",
@@ -37,5 +44,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-textshadow")],
 };
