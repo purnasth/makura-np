@@ -9,6 +9,10 @@ export default {
         dark: "#000111",
         light: "#F8F8FF",
       },
+      backgroundImage: {
+        gradient:
+          "linear-gradient(121.21deg, #C0C0C0 13.03%, #D3D3D3 48.04%, #A9A9A9 81.98%)",
+      },
       fontFamily: {
         body: ["Titillium Web", "sans-serif"],
         luxury: ["Tan Pearl", "sans-serif"],

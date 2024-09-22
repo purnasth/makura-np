@@ -56,6 +56,14 @@
     @apply font-body font-light;
   }
 
+  main {
+    @apply py-12 px-4 sm:py-24 md:px-12 md:py-[7.5rem] lg:py-[9rem] relative z-10 bg-light;
+  }
+
+  section {
+    @apply bg-light;
+  }
+
   .filter-black {
     filter: brightness(0) saturate(100%) invert(3%) sepia(17%) saturate(7030%) hue-rotate(273deg) brightness(105%) contrast(105%);
   }
@@ -64,11 +72,8 @@
     filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(0deg) brightness(100%) contrast(100%);
   }
 
-  main {
-    @apply py-12 px-4 sm:py-24 md:px-12 md:py-[7.5rem] lg:py-[9rem] relative z-10 bg-light;
+  .hover-outline {
+    @apply outline outline-2 outline-offset-0 outline-dark/0 hover:outline-dark/60 hover:outline-offset-2 focus:outline-offset-2 focus:outline-dark transition-all duration-200 ease-linear;
   }
 
-  section {
-    @apply bg-light;
-  }
 }
