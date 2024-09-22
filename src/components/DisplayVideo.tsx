@@ -1,11 +1,11 @@
 import React, { useRef, useState, useEffect } from "react";
-import { HiOutlineSpeakerWave, HiOutlineSpeakerXMark } from "react-icons/hi2";
 import {
   TbPlayerPlay,
   TbPlayerPause,
   TbPictureInPicture,
 } from "react-icons/tb";
 import { BiFullscreen } from "react-icons/bi";
+import { BiVolumeMute, BiVolumeFull } from "react-icons/bi";
 
 interface DisplayVideoProps {
   poster: string;
@@ -19,7 +19,7 @@ const DisplayVideo: React.FC<DisplayVideoProps> = ({
   videoClassName,
 }) => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
-  const [isMuted, setIsMuted] = useState(false); // Start unmuted
+  const [isMuted, setIsMuted] = useState(true); // Start unmuted
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [isPlaying, setIsPlaying] = useState(true); // Track if video is playing
 
@@ -35,8 +35,8 @@ const DisplayVideo: React.FC<DisplayVideoProps> = ({
             videoRef.current?.pause();
             // Mute the video when not in view
             if (videoRef.current) {
-              videoRef.current.muted = false;
-              setIsMuted(false);
+              videoRef.current.muted = true;
+              setIsMuted(true);
             }
           }
         });
@@ -111,7 +111,7 @@ const DisplayVideo: React.FC<DisplayVideoProps> = ({
         Your browser does not support the video tag.
       </video>
 
-      <div className="absolute top-0 right-0 size-fit h-screen translate-x-24 group-hover:translate-x-0 transition-all duration-500 ease-linear z-20 flex items-center justify-center">
+      <div className="fixed top-0 right-0 size-fit h-screen translate-x-24 group-hover:translate-x-0 transition-all duration-500 ease-linear z-20 flex items-center justify-center">
         <svg
           version="1.2"
           xmlns="http://www.w3.org/2000/svg"
@@ -141,7 +141,7 @@ const DisplayVideo: React.FC<DisplayVideoProps> = ({
             onClick={toggleMute}
             className="text-light/70 hover:text-light text-xl p-1 hover:bg-light/20 outline outline-[0.5px] outline-light/0 hover:outline-light/50 rounded-full transition-all duration-300 hover:scale-110"
           >
-            {isMuted ? <HiOutlineSpeakerXMark /> : <HiOutlineSpeakerWave />}
+            {isMuted ? <BiVolumeMute /> : <BiVolumeFull />}
           </button>
 
           <button
