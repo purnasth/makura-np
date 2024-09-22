@@ -13,6 +13,7 @@ import makuraVideo2 from "./assets/video/makuraa2.mp4";
 import makuraLandscape from "./assets/video/makura_landscape.mp4";
 import DisplayVideo from "./components/DisplayVideo";
 import LatestProducts from "./components/LatestProducts";
+import LogoBar from "./components/ui/LogoBar";
 
 const App: React.FC = () => {
   return (
@@ -46,6 +47,7 @@ const App: React.FC = () => {
         videoClassName="w-full h-80 sm:h-[50vh] sm:min-h-96 lg:h-[36rem] xl:h-[105vh] object-cover z-10"
       />
       <LatestProducts />
+      <LogoBar />
       <InstagramWall />
       <Footer />
     </>
