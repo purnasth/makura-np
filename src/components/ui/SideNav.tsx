@@ -6,6 +6,8 @@ import logo from "../../assets/logo.png";
 
 import { AiFillInstagram } from "react-icons/ai";
 
+import ProductsSlider from "./ProductsSlider";
+
 const SideNav: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -33,7 +35,7 @@ const SideNav: React.FC = () => {
       )}
 
       <div
-        className={`fixed top-0 left-0 w-full h-screen text-dark transition-all duration-500 ${
+        className={`fixed top-0 left-0 w-full h-screen overflow-y-auto text-dark transition-all duration-500 ${
           isOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
@@ -117,60 +119,21 @@ const SideNav: React.FC = () => {
                 </ul>
               </div>
 
-              <div className="col-span-3 space-y-10">
+              <div className="col-span-3">
                 <div>
-                  <span className="uppercase text-dark/80">Our Products</span>
-                  <div className="mt-4 grid grid-cols-4 gap-5">
-                    <div className="group space-y-2">
-                      <img
-                        src="https://kalpamart.com/media/products/Sterling-Silver-Infinity-CZ-Diamond-Ring-MR051R-600x600.jpg"
-                        alt="Silver Ring"
-                        className="w-full h-64 object-contain bg-white shadow-md group-hover:shadow-lg transition-all duration-300"
-                      />
-                      <h4 className="text-lg font-medium text-dark/80 flex items-center gap-2">
-                        <span className="h-[1px] w-12 group-hover:w-4 bg-dark/80 transition-all duration-300"></span>
-                        Silver Ring
-                      </h4>
-                    </div>
-                    <div className="group space-y-2">
-                      <img
-                        src="https://kalpamart.com/media/products/Sterling-Silver-Infinity-CZ-Diamond-Ring-MR051R-600x600.jpg"
-                        alt="Silver Ring"
-                        className="w-full h-64 object-contain bg-white shadow-md group-hover:shadow-lg transition-all duration-300"
-                      />
-                      <h4 className="text-lg font-medium text-dark/80 flex items-center gap-2">
-                        <span className="h-[1px] w-12 group-hover:w-4 bg-dark/80 transition-all duration-300"></span>
-                        Silver Ring
-                      </h4>
-                    </div>
-                    <div className="group space-y-2">
-                      <img
-                        src="https://kalpamart.com/media/products/Sterling-Silver-Infinity-CZ-Diamond-Ring-MR051R-600x600.jpg"
-                        alt="Silver Ring"
-                        className="w-full h-64 object-contain bg-white shadow-md group-hover:shadow-lg transition-all duration-300"
-                      />
-                      <h4 className="text-lg font-medium text-dark/80 flex items-center gap-2">
-                        <span className="h-[1px] w-12 group-hover:w-4 bg-dark/80 transition-all duration-300"></span>
-                        Silver Ring
-                      </h4>
-                    </div>
-                    <div className="group space-y-2">
-                      <img
-                        src="https://kalpamart.com/media/products/Sterling-Silver-Infinity-CZ-Diamond-Ring-MR051R-600x600.jpg"
-                        alt="Silver Ring"
-                        className="w-full h-64 object-contain bg-white shadow-md group-hover:shadow-lg transition-all duration-300"
-                      />
-                      <h4 className="text-lg font-medium text-dark/80 flex items-center gap-2">
-                        <span className="h-[1px] w-12 group-hover:w-4 bg-dark/80 transition-all duration-300"></span>
-                        Silver Ring
-                      </h4>
-                    </div>
-                  </div>
+                  <span className="uppercase text-dark/80">
+                    Trending Products
+                  </span>
+
+                  <ProductsSlider />
                 </div>
 
                 <div>
                   <p className="max-w-3xl text-dark">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ipsam porro illum voluptatum consectetur, officia, magni reiciendis quam sit veritatis, quisquam id dolor sapiente minima recusandae quasi atque.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
+                    ipsam porro illum voluptatum consectetur, officia, magni
+                    reiciendis quam sit veritatis, quisquam id dolor sapiente
+                    minima recusandae quasi atque.
                   </p>
                   <ul className="flex items-center gap-4 mt-5">
                     <li className="group">
