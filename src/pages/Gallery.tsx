@@ -180,7 +180,25 @@ const Gallery: React.FC = () => {
     }
   }, [filterKey]);
 
-  const handleFilterKeyChange = (key: string) => () => setFilterKey(key);
+  const handleFilterKeyChange = (key: string) => () => {
+    setFilterKey(key);
+
+    // Calculate the total height of the header and sticky nav
+    const headerHeight = 64; // Adjust based on your actual header height
+    const stickyNavHeight = 64; // Adjust based on your sticky nav height
+    const offset = headerHeight + stickyNavHeight;
+
+    setTimeout(() => {
+      const galleryContainer = document.getElementById("galleryDisplay");
+      if (galleryContainer) {
+        const topPosition =
+          galleryContainer.getBoundingClientRect().top +
+          window.scrollY -
+          offset;
+        window.scrollTo({ top: topPosition, behavior: "smooth" });
+      }
+    }, 400);
+  };
 
   return (
     <main className="px-0">
@@ -197,34 +215,36 @@ const Gallery: React.FC = () => {
           </li>
         ))}
       </ul>
-      <hr />
-      <LightGallery
-        plugins={[lgZoom, lgVideo, lgThumbnail, lgFullscreen, lgAutoplay]}
-        mode="lg-fade"
-        elementClassNames="filter-container flex flex-wrap"
-        thumbnail={true}
-        autoplay={true}
-        allowMediaOverlap={true}
-        toggleThumb={true}
-      >
-        {items.map((item) => (
-          <div
-            key={item.id}
-            data-src={item.image}
-            className={`filter-item group ${
-              item.category ? item.category : "no-category"
-            } flex-shrink-0 w-full sm:w-1/2 lg:w-1/4 overflow-hidden cursor-pointer outline outline-8 outline-light my-1`}
-          >
-            <img
-              src={item.image}
-              alt={item.title}
-              className="size-full object-cover transition-all duration-300 ease-linear group-hover:scale-105"
-              loading="lazy"
-              draggable="false"
-            />
-          </div>
-        ))}
-      </LightGallery>
+
+      <section id="galleryDisplay" className="scroll-pt-32">
+        <LightGallery
+          plugins={[lgZoom, lgVideo, lgThumbnail, lgFullscreen, lgAutoplay]}
+          mode="lg-fade"
+          elementClassNames="filter-container flex flex-wrap"
+          thumbnail={true}
+          autoplay={true}
+          allowMediaOverlap={true}
+          toggleThumb={true}
+        >
+          {items.map((item) => (
+            <div
+              key={item.id}
+              data-src={item.image}
+              className={`filter-item group ${
+                item.category ? item.category : "no-category"
+              } flex-shrink-0 w-full sm:w-1/2 lg:w-1/4 overflow-hidden cursor-pointer outline outline-8 outline-light my-1`}
+            >
+              <img
+                src={item.image}
+                alt={item.title}
+                className="size-full object-cover transition-all duration-300 ease-linear group-hover:scale-105"
+                loading="lazy"
+                draggable="false"
+              />
+            </div>
+          ))}
+        </LightGallery>
+      </section>
     </main>
   );
 };

@@ -109,7 +109,7 @@ const SideNav: React.FC = () => {
                   </li>
                   <li className="w-full">
                     <a
-                      href="aboutPage.html"
+                      href="/gallery"
                       className="navlink w-full pb-2 inline-block font-luxury text-3xl text-dark tracking-widest uppercase"
                       aria-label="Gallery"
                     >
