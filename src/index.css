@@ -87,4 +87,9 @@
     @apply outline outline-2 outline-offset-0 outline-dark/0 hover:outline-dark/60 hover:outline-offset-2 focus:outline-offset-2 focus:outline-dark transition-all duration-200 ease-linear;
   }
 
+  .text-gradient {
+    @apply bg-gradient-to-b from-[#C0C0C0] from-[27%] via-[#D3D3D3] via-[40%] to-[#A9A9A9] to-[98%] text-transparent bg-clip-text;
+    -webkit-text-stroke: 0.5px black;
+  }
+
 }

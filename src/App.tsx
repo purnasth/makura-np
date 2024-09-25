@@ -14,6 +14,7 @@ import makuraLandscape from "./assets/video/makura_landscape.mp4";
 import DisplayVideo from "./components/DisplayVideo";
 import LatestProducts from "./components/LatestProducts";
 import LogoBar from "./components/ui/LogoBar";
+import Gallery from "./pages/Gallery";
 
 const App: React.FC = () => {
   return (
@@ -40,6 +41,7 @@ const App: React.FC = () => {
           </button>
         </div>
       </section>
+      <Gallery />
       <About />
       <DisplayVideo
         poster={img1}
