@@ -13,9 +13,9 @@ const About: React.FC = () => {
         </h3>
       </div>
 
-      <section className="mt-20">
-        <div className="grid grid-cols-3 gap-24 content-center">
-          <div className="space-y-24">
+      <section className="mt-8 md:mt-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-24 content-center">
+          <div className="hidden md:block space-y-24">
             <div className="flex items-end justify-end">
               <img src={img1} alt="" className="w-44 h-60 object-cover" />
             </div>
@@ -49,7 +49,7 @@ const About: React.FC = () => {
               exercitationem saepe. Velit!
             </p>
           </div>
-          <div className="space-y-24">
+          <div className="hidden md:block space-y-24">
             <div className="flex items-end justify-end">
               <img src={img1} alt="" className="w-80 h-full object-cover" />
             </div>

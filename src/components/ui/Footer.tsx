@@ -12,15 +12,15 @@ import { AiFillInstagram } from "react-icons/ai";
 const Footer: React.FC = () => {
   return (
     <>
-      <main className="bg-dark text-light mb-[40vh] 2xl:mb-[50vh] pb-12">
-        <div className="container">
-          <div className="grid grid-cols-4 gap-12">
-            <div className="col-span-1">
+      <main className="bg-dark text-light mb-[100vh] sm:mb-[40vh] 2xl:mb-[50vh] pb-12">
+        <div className="md:container">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
+            <div className="md:col-span-1">
               <a href="/" className="">
                 <img
                   src={logo}
                   alt="Logo"
-                  className={`filter-white size-20 object-contain transition-all duration-500`}
+                  className={`filter-white size-16 md:size-20 object-contain transition-all duration-500`}
                 />
               </a>
               <h2 className="text-2xl mt-8 mb-2">Makura</h2>
@@ -65,7 +65,7 @@ const Footer: React.FC = () => {
                 </li>
               </ul>
             </div>
-            <div className="col-span-1 ml-16">
+            <div className="hidden md:block md:col-span-1 md:ml-16">
               <span className="text-xs uppercase text-light/40">Menu</span>
 
               <ul className="mt-10 space-y-6">
@@ -103,12 +103,12 @@ const Footer: React.FC = () => {
                 </li>
               </ul>
             </div>
-            <div className="col-span-2">
+            <div className="md:col-span-2">
               <span className="text-xs uppercase text-light/40">
                 Instagram wall
               </span>
 
-              <div className="mt-10 grid grid-cols-4 gap-4">
+              <div className="mt-4 md:mt-10 grid grid-cols-4 gap-4">
                 <img
                   src={img1}
                   alt=""
@@ -133,10 +133,10 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          <hr className="border-light/5 my-12" />
+          <hr className="border-light/5 my-6 md:my-12" />
           {/* <div className="bg-gradient-to-r from-light/5 via-light/5 to-light/5 w-full h-px my-12" /> */}
 
-          <div className="flex items-center justify-between text-sm">
+          <div className="flex md:items-center justify-between gap-2 flex-col md:flex-row text-sm">
             <p className="font-extralight">
               &copy; 2024 Makura. All Rights Reserved.
             </p>
@@ -162,7 +162,7 @@ const Footer: React.FC = () => {
           className="w-full h-[40vh] 2xl:h-[50vh] object-cover object-bottom"
         /> */}
         <video
-          className={`w-full h-[40vh] 2xl:h-[50vh] object-cover`}
+          className={`w-full h-screen sm:h-[40vh] 2xl:h-[50vh] object-cover`}
           autoPlay
           loop
           muted
@@ -179,7 +179,7 @@ const Footer: React.FC = () => {
           ></track>
           Your browser does not support the video tag.
         </video>
-        <h2 className="absolute text-3xl text-white text-shadow-light-glow">
+        <h2 className="hidden md:block absolute text-2xl md:text-3xl text-white text-shadow-light-glow text-center px-8 leading-relaxed">
           Makura Proudly Made in Nepal
         </h2>
       </section>

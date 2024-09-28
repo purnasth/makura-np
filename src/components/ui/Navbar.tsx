@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <nav className={`fixed top-0 w-full px-12 z-40`}>
+      <nav className={`fixed top-0 w-full px-2 md:px-12 z-40`}>
         <div
           className={`absolute inset-0 size-full ${
             isScrolled
@@ -44,14 +44,14 @@ const Navbar: React.FC = () => {
               src={logo}
               alt="Logo"
               className={`filter-white object-contain transition-all duration-500 ${
-                isScrolled ? "size-12" : "size-20"
+                isScrolled ? "size-10 md:size-12" : "size-14 md:size-20"
               }`}
             />
           </a>
 
-          <div className="w-1/3 flex items-center justify-end gap-5">
-            <TbUser className="text-light text-xl" />
-            <TbShoppingCart className="text-light text-xl" />
+          <div className="w-1/3 flex items-center justify-end gap-3 md:gap-5">
+            <TbUser className="text-light text-base md:text-xl" />
+            <TbShoppingCart className="text-light text-base md:text-xl" />
             <SideNav />
           </div>
         </div>

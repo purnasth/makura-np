@@ -11,14 +11,14 @@ const SearchBar: React.FC = () => {
 
   return (
     <div className="relative w-full max-w-xs">
-      <TbSearch className="absolute left-0 top-1/2 transform -translate-y-1/2 text-light text-base" />
+      <TbSearch className="absolute left-0 top-1/2 transform -translate-y-1/2 text-light text-sm md:text-base" />
 
       <input
         type="text"
         value={searchQuery}
         onChange={handleSearch}
         placeholder="Search Products ..."
-        className="w-full pl-8 pr-2 py-1.5 bg-transparent text-light placeholder-light focus:outline-none transition duration-200"
+        className="w-full pl-5 md:pl-8 md:pr-2 py-1.5 text-sm md:text-base bg-transparent text-light placeholder-light focus:outline-none transition duration-200"
       />
     </div>
   );

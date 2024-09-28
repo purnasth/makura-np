@@ -1,21 +1,22 @@
 import React, { useEffect } from "react";
 
+const instagramPosts = [
+  "https://www.instagram.com/p/CqiCNmkJ2mc/?utm_source=ig_embed&amp;utm_campaign=loadingd",
+  "https://www.instagram.com/p/CaZgesIIIZs/?utm_source=ig_embed&amp;utm_campaign=loading",
+  "https://www.instagram.com/p/C9zojtHyvmQ/?utm_source=ig_embed&amp;utm_campaign=loading",
+  "https://www.instagram.com/p/Cs_VnfNyVC3/?utm_source=ig_embed&amp;utm_campaign=loading",
+  "https://www.instagram.com/reel/C1a6hU2P_Y1/?utm_source=ig_embed&amp;utm_campaign=loading",
+  "https://www.instagram.com/reel/CozJr8jqHX1/?utm_source=ig_embed&utm_campaign=loading",
+  "https://www.instagram.com/p/CyivN5pCo9R/?hl=en",
+  "https://instagram.com/p/CqiD_fPJ8bo/?hl=en&img_index=1",
+  "https://www.instagram.com/p/Co9tvBpoDAC/?hl=en",
+  "https://www.instagram.com/p/CmF5scOJTTD/?hl=en&img_index=1",
+  "https://www.instagram.com/p/Cim6b6kpmpF/?hl=en&img_index=1",
+  "https://www.instagram.com/p/CWafXkysfeU/?hl=en&img_index=1",
+  "https://www.instagram.com/p/CWc3rStP-uO/?hl=en",
+];
+
 const InstagramWall: React.FC = () => {
-  const instagramPosts = [
-    "https://www.instagram.com/p/CqiCNmkJ2mc/?utm_source=ig_embed&amp;utm_campaign=loadingd",
-    "https://www.instagram.com/p/CaZgesIIIZs/?utm_source=ig_embed&amp;utm_campaign=loading",
-    "https://www.instagram.com/p/C9zojtHyvmQ/?utm_source=ig_embed&amp;utm_campaign=loading",
-    "https://www.instagram.com/p/Cs_VnfNyVC3/?utm_source=ig_embed&amp;utm_campaign=loading",
-    "https://www.instagram.com/reel/C1a6hU2P_Y1/?utm_source=ig_embed&amp;utm_campaign=loading",
-    "https://www.instagram.com/reel/CozJr8jqHX1/?utm_source=ig_embed&utm_campaign=loading",
-    "https://www.instagram.com/p/CyivN5pCo9R/?hl=en",
-    "https://instagram.com/p/CqiD_fPJ8bo/?hl=en&img_index=1",
-    "https://www.instagram.com/p/Co9tvBpoDAC/?hl=en",
-    "https://www.instagram.com/p/CmF5scOJTTD/?hl=en&img_index=1",
-    "https://www.instagram.com/p/Cim6b6kpmpF/?hl=en&img_index=1",
-    "https://www.instagram.com/p/CWafXkysfeU/?hl=en&img_index=1",
-    "https://www.instagram.com/p/CWc3rStP-uO/?hl=en",
-  ];
 
   useEffect(() => {
     // Load Instagram embed script once
@@ -38,7 +39,7 @@ const InstagramWall: React.FC = () => {
           cupiditate, excepturi totam nobis sunt assumenda. Velit!
         </p>
       </div>
-      <div className="scroll mt-20 flex gap-6 text-light max-w-full overflow-x-auto">
+      <div className="scroll mt-12 md:mt-20 flex gap-6 text-light max-w-full overflow-x-auto">
         {instagramPosts.map((postUrl, index) => (
           <div key={index} className="mb-10">
             {/* mb is for scrollbar */}
@@ -62,7 +63,7 @@ const InstagramWall: React.FC = () => {
           View more on Instagram
         </button>
       </div> */}
-      <div className=" mt-10 flex items-center justify-center">
+      <div className="mt-0 md:mt-10 flex items-center justify-center">
         <button className="group relative transition-all duration-500 hover:scale-110 font-semibold text-center">
           <span className="absolute -bottom-px -right-0 w-full h-px bg-dark/60 scale-x-100 group-hover:scale-x-0 origin-center transition-all duration-300 ease-linear"></span>
           View more on Instagram

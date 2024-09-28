@@ -23,7 +23,7 @@ const SideNav: React.FC = () => {
 
   return (
     <>
-      <button onClick={toggleNav} className="text-2xl text-light">
+      <button onClick={toggleNav} className="text-xl md:text-2xl text-light">
         <TbMenu2 />
       </button>
 
@@ -35,7 +35,7 @@ const SideNav: React.FC = () => {
       )}
 
       <div
-        className={`fixed top-0 left-0 w-full h-screen overflow-y-auto text-dark transition-all duration-500 ${
+        className={`fixed top-0 left-0 w-full min-h-screen overflow-y-auto text-dark transition-all duration-500 ${
           isOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
@@ -48,15 +48,15 @@ const SideNav: React.FC = () => {
               'url("https://media.istockphoto.com/id/1704870086/vector/abstract-gray-and-white-color-gradient-background-vector-illustration.jpg?s=612x612&w=0&k=20&c=U_tzoW8Rktdydkc8Ng-O-1kPI-r7BcJun-o2O3n2nvM=")',
           }}
         ></div>
-        <div className="px-12 pt-2 pb-14 flex items-center justify-between flex-col gap-16 size-full">
+        <div className="px-2 md:px-12 py-2 md:pb-14 flex items-center justify-between flex-col gap-2 md:gap-16 size-full ">
           <div className="flex items-center justify-between relative w-full">
             <ul className="w-1/3 flex items-center gap-3">
               <li>
                 <a
                   href="#"
-                  className="text-base inline-flex items-center justify-end gap-1 tracking-wide uppercase"
+                  className="text-xs md:text-base inline-flex items-center justify-end gap-1 tracking-wide uppercase"
                 >
-                  <MdCall className="text-xl" /> +977-9808021753
+                  <MdCall className="text-base md:text-xl" /> +9779808021753
                 </a>
               </li>
             </ul>
@@ -64,7 +64,7 @@ const SideNav: React.FC = () => {
               <img
                 src={logo}
                 alt="Logo"
-                className={`filter-black size-20 object-contain transition-all duration-500`}
+                className={`filter-black size-16 md:size-20 object-contain transition-all duration-500`}
               />
             </a>
             <button
@@ -72,18 +72,18 @@ const SideNav: React.FC = () => {
               className="w-1/3 text-xs inline-flex items-center justify-end gap-1 tracking-widest uppercase"
             >
               Close
-              <MdClose className="text-3xl" />
+              <MdClose className="text-xl md:text-3xl" />
             </button>
           </div>
           <div className="w-full">
-            <div className="relative grid grid-cols-4">
+            <div className="relative grid grid-cols-1 md:grid-cols-4">
               <div className="col-span-1">
                 {/* <span className="uppercase text-dark/40 mb-8">Menu</span> */}
                 <ul className="links flex items-start justify-start gap-2 md:gap-24 flex-col">
                   <li className="w-full">
                     <a
                       href="#"
-                      className="navlink w-full pb-2 inline-block font-luxury text-3xl text-dark tracking-widest uppercase"
+                      className="navlink w-full pb-2 inline-block font-luxury text-sm md:text-3xl text-dark tracking-widest uppercase"
                       aria-label="Watch"
                     >
                       Watch
@@ -92,7 +92,7 @@ const SideNav: React.FC = () => {
                   <li className="w-full">
                     <a
                       href="#"
-                      className="navlink w-full pb-2 inline-block font-luxury text-3xl text-dark tracking-widest uppercase"
+                      className="navlink w-full pb-2 inline-block font-luxury text-sm md:text-3xl text-dark tracking-widest uppercase"
                       aria-label="Products"
                     >
                       Products
@@ -101,7 +101,7 @@ const SideNav: React.FC = () => {
                   <li className="w-full">
                     <a
                       href="#"
-                      className="navlink w-full pb-2 inline-block font-luxury text-3xl text-dark tracking-widest uppercase"
+                      className="navlink w-full pb-2 inline-block font-luxury text-sm md:text-3xl text-dark tracking-widest uppercase"
                       aria-label="Offers"
                     >
                       Offers
@@ -110,7 +110,7 @@ const SideNav: React.FC = () => {
                   <li className="w-full">
                     <a
                       href="/gallery"
-                      className="navlink w-full pb-2 inline-block font-luxury text-3xl text-dark tracking-widest uppercase"
+                      className="navlink w-full pb-2 inline-block font-luxury text-sm md:text-3xl text-dark tracking-widest uppercase"
                       aria-label="Gallery"
                     >
                       Gallery
@@ -121,7 +121,7 @@ const SideNav: React.FC = () => {
 
               <div className="col-span-3">
                 <div>
-                  <span className="uppercase text-dark/80">
+                  <span className="hidden md:block uppercase text-dark/80">
                     Trending Products
                   </span>
 
@@ -129,7 +129,7 @@ const SideNav: React.FC = () => {
                 </div>
 
                 <div>
-                  <p className="max-w-3xl text-dark">
+                  <p className="hidden md:block max-w-3xl text-dark">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
                     ipsam porro illum voluptatum consectetur, officia, magni
                     reiciendis quam sit veritatis, quisquam id dolor sapiente
@@ -174,7 +174,7 @@ const SideNav: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="flex items-center justify-between relative w-full">
+          <div className="flex md:items-center justify-between flex-col md:flex-row relative w-full">
             <p>&copy; 2024 Makura. All Rights Reserved.</p>
             <p className="flex item-center group">
               Developed by

@@ -140,15 +140,25 @@ const products: Product[] = [
 ];
 
 const ProductsSlider: React.FC = () => {
-  const itemsPerView = 4; // Show 4 items per slide
   const totalItems = products.length; // Total number of products
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
+    breakpoints: {
+      "(max-width: 768px)": {
+        slides: { perView: 1, spacing: 8 }, // Mobile: 1 item
+      },
+      "(min-width: 769px) and (max-width: 1024px)": {
+        slides: { perView: 2, spacing: 12 }, // iPad: 2 items
+      },
+      "(min-width: 1025px)": {
+        slides: { perView: 4, spacing: 12 }, // Larger devices: 4 items
+      },
+    },
     slides: {
-      perView: itemsPerView, // Keep showing 4 items at once
-      spacing: 12, // Add space between slides
+      perView: 4, // Default for larger screens
+      spacing: 12,
     },
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel);
@@ -189,7 +199,7 @@ const ProductsSlider: React.FC = () => {
 
   // Calculate the start and end item numbers dynamically
   const currentItemStart = Math.min(currentSlide + 1, totalItems);
-  const currentItemEnd = Math.min(currentSlide + itemsPerView, totalItems);
+  const currentItemEnd = Math.min(currentSlide + 4, totalItems); // This will change based on current `perView`
 
   return (
     <div className="relative">

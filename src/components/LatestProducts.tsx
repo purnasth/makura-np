@@ -151,7 +151,7 @@ const LatestProducts: React.FC = () => {
       </div>
 
       <section>
-        <div className="mt-16 grid grid-cols-1 gap-4 gap-y-24 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-16 grid grid-cols-1 gap-4 gap-y-12 md:gap-y-24 sm:grid-cols-2 lg:grid-cols-4">
           {products.map((product) => (
             <div key={product.id} className="size-full">
               <img
