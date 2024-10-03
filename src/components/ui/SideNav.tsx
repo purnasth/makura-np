@@ -40,7 +40,7 @@ const SideNav: React.FC = () => {
       )}
 
       <div
-        className={`fixed top-0 left-0 w-full min-h-screen overflow-y-auto text-dark transition-all duration-500 ${
+        className={`fixed top-0 left-0 size-full h-screen text-dark transition-all duration-500 bg-green-600 ${
           isOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
@@ -53,7 +53,7 @@ const SideNav: React.FC = () => {
               'url("https://media.istockphoto.com/id/1704870086/vector/abstract-gray-and-white-color-gradient-background-vector-illustration.jpg?s=612x612&w=0&k=20&c=U_tzoW8Rktdydkc8Ng-O-1kPI-r7BcJun-o2O3n2nvM=")',
           }}
         ></div>
-        <div className="px-2 md:px-12 py-2 md:pb-14 flex items-center justify-between flex-col gap-2 md:gap-16 size-full ">
+        <div className="px-2 md:px-12 py-2 md:pb-14 flex items-center justify-between flex-col gap-2 md:gap-16 size-full">
           <div className="flex items-center justify-between relative w-full">
             <ul className="w-1/3 flex items-center gap-3">
               <li>
@@ -80,7 +80,7 @@ const SideNav: React.FC = () => {
               <MdClose className="text-xl md:text-3xl" />
             </button>
           </div>
-          <div className="mt-6 md:mt-0 w-full">
+          <div className="w-full">
             <div className="relative grid grid-cols-1 md:grid-cols-4">
               <div className="col-span-1">
                 {/* <span className="uppercase text-dark/40 mb-8">Menu</span> */}
@@ -88,7 +88,7 @@ const SideNav: React.FC = () => {
                   <li className="w-full group">
                     <a
                       href="/products"
-                      className="navlink w-full pb-2 inline-flex justify-between font-luxury text-base md:text-3xl text-dark tracking-widest uppercase group-hover:tracking-[0.25em] group-hover:font-extrabold transition-all duration-300 group-hover:text-black"
+                      className="navlink w-full pb-2 inline-flex justify-between font-luxury text-base md:text-2xl 2xl:text-3xl text-dark tracking-widest uppercase group-hover:tracking-[0.25em] group-hover:font-extrabold transition-all duration-300 group-hover:text-black"
                       aria-label="Watch"
                     >
                       Watch
@@ -98,7 +98,7 @@ const SideNav: React.FC = () => {
                   <li className="group w-full">
                     <a
                       href="/products"
-                      className="navlink w-full pb-2 inline-flex justify-between font-luxury text-base md:text-3xl text-dark tracking-widest uppercase group-hover:tracking-[0.25em] group-hover:font-extrabold transition-all duration-300 group-hover:text-black"
+                      className="navlink w-full pb-2 inline-flex justify-between font-luxury text-base md:text-2xl 2xl:text-3xl text-dark tracking-widest uppercase group-hover:tracking-[0.25em] group-hover:font-extrabold transition-all duration-300 group-hover:text-black"
                       aria-label="Products"
                     >
                       Products
@@ -108,7 +108,7 @@ const SideNav: React.FC = () => {
                   <li className="group w-full">
                     <a
                       href="/offers"
-                      className="navlink w-full pb-2 inline-flex justify-between font-luxury text-base md:text-3xl text-dark tracking-widest uppercase group-hover:tracking-[0.25em] group-hover:font-extrabold transition-all duration-300 group-hover:text-black"
+                      className="navlink w-full pb-2 inline-flex justify-between font-luxury text-base md:text-2xl 2xl:text-3xl text-dark tracking-widest uppercase group-hover:tracking-[0.25em] group-hover:font-extrabold transition-all duration-300 group-hover:text-black"
                       aria-label="Offers"
                     >
                       Offers
@@ -117,8 +117,8 @@ const SideNav: React.FC = () => {
                   </li>
                   <li className="group w-full">
                     <a
-                      href="/products"
-                      className="navlink w-full pb-2 inline-flex justify-between font-luxury text-base md:text-3xl text-dark tracking-widest uppercase group-hover:tracking-[0.25em] group-hover:font-extrabold transition-all duration-300 group-hover:text-black"
+                      href="/gallery"
+                      className="navlink w-full pb-2 inline-flex justify-between font-luxury text-base md:text-2xl 2xl:text-3xl text-dark tracking-widest uppercase group-hover:tracking-[0.25em] group-hover:font-extrabold transition-all duration-300 group-hover:text-black"
                       aria-label="Gallery"
                     >
                       Gallery
