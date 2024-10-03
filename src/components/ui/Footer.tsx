@@ -12,7 +12,7 @@ import { AiFillInstagram } from "react-icons/ai";
 const Footer: React.FC = () => {
   return (
     <>
-      <main className="bg-dark text-light mb-[100vh] sm:mb-[40vh] 2xl:mb-[50vh] pb-12">
+      <main className="bg-dark text-light sm:mb-[40vh] 2xl:mb-[50vh] pb-12">
         <div className="md:container">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
             <div className="md:col-span-1">
@@ -155,7 +155,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </main>
-      <section className="fixed bottom-0 w-full flex items-center justify-center -z-10">
+      <section className="static md:fixed bottom-0 w-full flex items-center justify-center -z-10">
         {/* <img
           src={img1}
           alt=""

@@ -20,9 +20,20 @@
     scrollbar-width: none !important;
   }
 
+  body,
+  section,
+  main {
+    @apply bg-light text-dark;
+  }
+
   .scroll {
     scrollbar-width: thin;
     scrollbar-color: #000111 #00011115;
+  }
+
+  .products-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: #000111 transparent;
   }
 
 

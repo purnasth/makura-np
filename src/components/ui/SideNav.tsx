@@ -8,6 +8,11 @@ import { AiFillInstagram } from "react-icons/ai";
 
 import ProductsSlider from "./ProductsSlider";
 
+import { PiWatchBold } from "react-icons/pi";
+import { PiHandbagBold } from "react-icons/pi";
+import { PiImageSquareBold } from "react-icons/pi";
+import { TbRosetteDiscountCheck } from "react-icons/tb";
+
 const SideNav: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -75,45 +80,49 @@ const SideNav: React.FC = () => {
               <MdClose className="text-xl md:text-3xl" />
             </button>
           </div>
-          <div className="w-full">
+          <div className="mt-6 md:mt-0 w-full">
             <div className="relative grid grid-cols-1 md:grid-cols-4">
               <div className="col-span-1">
                 {/* <span className="uppercase text-dark/40 mb-8">Menu</span> */}
                 <ul className="links flex items-start justify-start gap-2 md:gap-24 flex-col">
-                  <li className="w-full">
+                  <li className="w-full group">
                     <a
-                      href="#"
-                      className="navlink w-full pb-2 inline-block font-luxury text-sm md:text-3xl text-dark tracking-widest uppercase"
+                      href="/products"
+                      className="navlink w-full pb-2 inline-flex justify-between font-luxury text-base md:text-3xl text-dark tracking-widest uppercase group-hover:tracking-[0.25em] group-hover:font-extrabold transition-all duration-300 group-hover:text-black"
                       aria-label="Watch"
                     >
                       Watch
+                      <PiWatchBold className="opacity-0 group-hover:opacity-100 inline-block mr-20 group-hover:mr-2 md:group-hover:mr-12 transition-all duration-300 ease-linear" />
                     </a>
                   </li>
-                  <li className="w-full">
+                  <li className="group w-full">
                     <a
-                      href="#"
-                      className="navlink w-full pb-2 inline-block font-luxury text-sm md:text-3xl text-dark tracking-widest uppercase"
+                      href="/products"
+                      className="navlink w-full pb-2 inline-flex justify-between font-luxury text-base md:text-3xl text-dark tracking-widest uppercase group-hover:tracking-[0.25em] group-hover:font-extrabold transition-all duration-300 group-hover:text-black"
                       aria-label="Products"
                     >
                       Products
+                      <PiHandbagBold className="opacity-0 group-hover:opacity-100 inline-block mr-20 group-hover:mr-2 md:group-hover:mr-12 transition-all duration-300 ease-linear" />
                     </a>
                   </li>
-                  <li className="w-full">
+                  <li className="group w-full">
                     <a
-                      href="#"
-                      className="navlink w-full pb-2 inline-block font-luxury text-sm md:text-3xl text-dark tracking-widest uppercase"
+                      href="/offers"
+                      className="navlink w-full pb-2 inline-flex justify-between font-luxury text-base md:text-3xl text-dark tracking-widest uppercase group-hover:tracking-[0.25em] group-hover:font-extrabold transition-all duration-300 group-hover:text-black"
                       aria-label="Offers"
                     >
                       Offers
+                      <TbRosetteDiscountCheck className="opacity-0 group-hover:opacity-100 inline-block mr-20 group-hover:mr-2 md:group-hover:mr-12 transition-all duration-300 ease-linear" />
                     </a>
                   </li>
-                  <li className="w-full">
+                  <li className="group w-full">
                     <a
-                      href="/gallery"
-                      className="navlink w-full pb-2 inline-block font-luxury text-sm md:text-3xl text-dark tracking-widest uppercase"
+                      href="/products"
+                      className="navlink w-full pb-2 inline-flex justify-between font-luxury text-base md:text-3xl text-dark tracking-widest uppercase group-hover:tracking-[0.25em] group-hover:font-extrabold transition-all duration-300 group-hover:text-black"
                       aria-label="Gallery"
                     >
                       Gallery
+                      <PiImageSquareBold className="opacity-0 group-hover:opacity-100 inline-block mr-20 group-hover:mr-2 md:group-hover:mr-12 transition-all duration-300 ease-linear" />
                     </a>
                   </li>
                 </ul>

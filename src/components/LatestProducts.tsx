@@ -10,7 +10,8 @@ interface Product {
   name: string;
   description: string;
   price: string;
-  originalPrice: string;
+  discount?: string;
+  originalPrice?: string;
   image: string;
 }
 
@@ -22,6 +23,7 @@ const products: Product[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, incidunt aperiam? Numquam animi illo accusantium cumque nulla non facilis veritatis!",
     price: "17999",
+    discount: "10%",
     originalPrice: "20000",
     image: product1,
   },
@@ -32,6 +34,7 @@ const products: Product[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, incidunt aperiam? Numquam animi illo accusantium cumque nulla non facilis veritatis!",
     price: "17999",
+    discount: "10%",
     originalPrice: "20000",
     image: product2,
   },
@@ -42,6 +45,7 @@ const products: Product[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, incidunt aperiam? Numquam animi illo accusantium cumque nulla non facilis veritatis!",
     price: "17999",
+    discount: "10%",
     originalPrice: "20000",
     image: product1,
   },
@@ -52,6 +56,7 @@ const products: Product[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, incidunt aperiam? Numquam animi illo accusantium cumque nulla non facilis veritatis!",
     price: "17999",
+    discount: "10%",
     originalPrice: "20000",
     image: product2,
   },
@@ -62,6 +67,7 @@ const products: Product[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, incidunt aperiam? Numquam animi illo accusantium cumque nulla non facilis veritatis!",
     price: "17999",
+    discount: "10%",
     originalPrice: "20000",
     image: product1,
   },
@@ -72,6 +78,7 @@ const products: Product[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, incidunt aperiam? Numquam animi illo accusantium cumque nulla non facilis veritatis!",
     price: "17999",
+    discount: "10%",
     originalPrice: "20000",
     image: product2,
   },
@@ -82,6 +89,7 @@ const products: Product[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, incidunt aperiam? Numquam animi illo accusantium cumque nulla non facilis veritatis!",
     price: "17999",
+    discount: "10%",
     originalPrice: "20000",
     image: product1,
   },
@@ -92,6 +100,7 @@ const products: Product[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, incidunt aperiam? Numquam animi illo accusantium cumque nulla non facilis veritatis!",
     price: "17999",
+    discount: "10%",
     originalPrice: "20000",
     image: product2,
   },
@@ -102,6 +111,7 @@ const products: Product[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, incidunt aperiam? Numquam animi illo accusantium cumque nulla non facilis veritatis!",
     price: "17999",
+    discount: "10%",
     originalPrice: "20000",
     image: product1,
   },
@@ -112,6 +122,7 @@ const products: Product[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, incidunt aperiam? Numquam animi illo accusantium cumque nulla non facilis veritatis!",
     price: "17999",
+    discount: "10%",
     originalPrice: "20000",
     image: product2,
   },
@@ -122,6 +133,7 @@ const products: Product[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, incidunt aperiam? Numquam animi illo accusantium cumque nulla non facilis veritatis!",
     price: "17999",
+    discount: "10%",
     originalPrice: "20000",
     image: product1,
   },
@@ -132,6 +144,7 @@ const products: Product[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, incidunt aperiam? Numquam animi illo accusantium cumque nulla non facilis veritatis!",
     price: "17999",
+    discount: "10%",
     originalPrice: "20000",
     image: product2,
   },
@@ -168,13 +181,17 @@ const LatestProducts: React.FC = () => {
                   {product.description}
                 </p>
                 <div className="mt-2">
-                  <span className="line-through text-red-600">
-                    Rs {product.originalPrice}
-                  </span>
-                  <span className="ml-2">Save 10%</span>
-                  <span className="ml-2 text-lg font-bold">
-                    Rs {product.price}
-                  </span>
+                  {product.originalPrice && (
+                    <span className="line-through text-red-600">
+                      Rs {product.originalPrice}
+                    </span>
+                  )}
+                  {product.discount && (
+                    <span className="mx-2 text-red-600">
+                      Save {product.discount}
+                    </span>
+                  )}
+                  <span className="text-lg font-bold">Rs {product.price}</span>
                 </div>
                 <button className="hover-outline mt-5 group bg-gradient px-6 py-1 rounded-full border border-dark/50 flex items-center justify-center gap-2 font-semibold transition-all duration-500">
                   Add to Cart
