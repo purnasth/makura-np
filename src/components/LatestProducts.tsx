@@ -1,154 +1,8 @@
 import React from "react";
 import { TbShoppingCart } from "react-icons/tb";
 
-import product1 from "../assets/products/1.jpg";
-import product2 from "../assets/products/2.jpg";
-
-interface Product {
-  id: number;
-  category: string;
-  name: string;
-  description: string;
-  price: string;
-  discount?: string;
-  originalPrice?: string;
-  image: string;
-}
-
-const products: Product[] = [
-  {
-    id: 1,
-    category: "Watch",
-    name: "Makura Watch",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, incidunt aperiam? Numquam animi illo accusantium cumque nulla non facilis veritatis!",
-    price: "17999",
-    discount: "10%",
-    originalPrice: "20000",
-    image: product1,
-  },
-  {
-    id: 2,
-    category: "Watch",
-    name: "Makura Watch",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, incidunt aperiam? Numquam animi illo accusantium cumque nulla non facilis veritatis!",
-    price: "17999",
-    discount: "10%",
-    originalPrice: "20000",
-    image: product2,
-  },
-  {
-    id: 3,
-    category: "Watch",
-    name: "Makura Watch",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, incidunt aperiam? Numquam animi illo accusantium cumque nulla non facilis veritatis!",
-    price: "17999",
-    discount: "10%",
-    originalPrice: "20000",
-    image: product1,
-  },
-  {
-    id: 4,
-    category: "Watch",
-    name: "Makura Watch",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, incidunt aperiam? Numquam animi illo accusantium cumque nulla non facilis veritatis!",
-    price: "17999",
-    discount: "10%",
-    originalPrice: "20000",
-    image: product2,
-  },
-  {
-    id: 5,
-    category: "Watch",
-    name: "Makura Watch",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, incidunt aperiam? Numquam animi illo accusantium cumque nulla non facilis veritatis!",
-    price: "17999",
-    discount: "10%",
-    originalPrice: "20000",
-    image: product1,
-  },
-  {
-    id: 6,
-    category: "Watch",
-    name: "Makura Watch",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, incidunt aperiam? Numquam animi illo accusantium cumque nulla non facilis veritatis!",
-    price: "17999",
-    discount: "10%",
-    originalPrice: "20000",
-    image: product2,
-  },
-  {
-    id: 7,
-    category: "Watch",
-    name: "Makura Watch",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, incidunt aperiam? Numquam animi illo accusantium cumque nulla non facilis veritatis!",
-    price: "17999",
-    discount: "10%",
-    originalPrice: "20000",
-    image: product1,
-  },
-  {
-    id: 8,
-    category: "Watch",
-    name: "Makura Watch",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, incidunt aperiam? Numquam animi illo accusantium cumque nulla non facilis veritatis!",
-    price: "17999",
-    discount: "10%",
-    originalPrice: "20000",
-    image: product2,
-  },
-  {
-    id: 9,
-    category: "Watch",
-    name: "Makura Watch",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, incidunt aperiam? Numquam animi illo accusantium cumque nulla non facilis veritatis!",
-    price: "17999",
-    discount: "10%",
-    originalPrice: "20000",
-    image: product1,
-  },
-  {
-    id: 10,
-    category: "Watch",
-    name: "Makura Watch",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, incidunt aperiam? Numquam animi illo accusantium cumque nulla non facilis veritatis!",
-    price: "17999",
-    discount: "10%",
-    originalPrice: "20000",
-    image: product2,
-  },
-  {
-    id: 11,
-    category: "Watch",
-    name: "Makura Watch",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, incidunt aperiam? Numquam animi illo accusantium cumque nulla non facilis veritatis!",
-    price: "17999",
-    discount: "10%",
-    originalPrice: "20000",
-    image: product1,
-  },
-  {
-    id: 12,
-    category: "Watch",
-    name: "Makura Watch",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, incidunt aperiam? Numquam animi illo accusantium cumque nulla non facilis veritatis!",
-    price: "17999",
-    discount: "10%",
-    originalPrice: "20000",
-    image: product2,
-  },
-];
+import { products } from "../constants/products";
+import { Product } from "../interfaces/Product";
 
 const LatestProducts: React.FC = () => {
   return (
@@ -165,7 +19,7 @@ const LatestProducts: React.FC = () => {
 
       <section>
         <div className="mt-16 grid grid-cols-1 gap-4 gap-y-12 md:gap-y-24 sm:grid-cols-2 lg:grid-cols-4">
-          {products.map((product) => (
+          {products.map((product: Product) => (
             <div key={product.id} className="size-full">
               <img
                 className="size-full max-h-[28rem] object-cover shadow-lg"
@@ -180,18 +34,28 @@ const LatestProducts: React.FC = () => {
                 <p className="text-dark/60 line-clamp-1">
                   {product.description}
                 </p>
-                <div className="mt-2">
-                  {product.originalPrice && (
-                    <span className="line-through text-red-600">
-                      Rs {product.originalPrice}
+                <div className="md:mt-2">
+                  {product.discount ? (
+                    <>
+                      <span className="line-through text-red-600">
+                        Rs.{product.productPrice}
+                      </span>
+                      <span className="mx-2 text-red-600">
+                        Save{product.discount}%
+                      </span>
+                      <span className="text-lg font-bold">
+                        Rs.
+                        {Math.round(
+                          parseInt(product.productPrice) *
+                            (1 - parseInt(product.discount) / 100)
+                        )}
+                      </span>
+                    </>
+                  ) : (
+                    <span className="text-lg font-bold">
+                      Rs {product.productPrice}
                     </span>
                   )}
-                  {product.discount && (
-                    <span className="mx-2 text-red-600">
-                      Save {product.discount}
-                    </span>
-                  )}
-                  <span className="text-lg font-bold">Rs {product.price}</span>
                 </div>
                 <button className="hover-outline mt-5 group bg-gradient px-6 py-1 rounded-full border border-dark/50 flex items-center justify-center gap-2 font-semibold transition-all duration-500">
                   Add to Cart
