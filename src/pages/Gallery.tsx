@@ -184,8 +184,8 @@ const Gallery: React.FC = () => {
     setFilterKey(key);
 
     // Calculate the total height of the header and sticky nav
-    const headerHeight = 64; // Adjust based on your actual header height
-    const stickyNavHeight = 64; // Adjust based on your sticky nav height
+    const headerHeight = 30; // Adjust based on your actual header height
+    const stickyNavHeight = 30; // Adjust based on your sticky nav height
     const offset = headerHeight + stickyNavHeight;
 
     setTimeout(() => {
@@ -201,12 +201,12 @@ const Gallery: React.FC = () => {
   };
 
   return (
-    <main className="px-0">
-      <ul className="sticky top-16 z-50 flex items-center justify-center gap-3 py-4 mb-12 flex-wrap bg-light">
+    <main className="px-0 z-auto">
+      <ul className="sticky top-20 z-30 flex items-center justify-center gap-3 flex-wrap py-2 bg-light rounded-full w-full max-w-xs mx-auto">
         {uniqueCategories.map((category) => (
           <li
             key={category}
-            className={`cursor-pointer capitalize text-center font-luxury px-5 py-1 rounded-full hover-outline transition-all duration-300 ${
+            className={`text-sm tracking-wider cursor-pointer capitalize text-center font-luxury px-5 py-1 rounded-full hover-outline transition-all duration-300 ${
               filterKey === category ? "bg-gradient font-bold" : "text-gradient"
             }`}
             onClick={handleFilterKeyChange(category)}
@@ -216,7 +216,7 @@ const Gallery: React.FC = () => {
         ))}
       </ul>
 
-      <section id="galleryDisplay" className="scroll-pt-32">
+      <section id="galleryDisplay" className="scroll-pt-32 mt-8">
         <LightGallery
           plugins={[lgZoom, lgVideo, lgThumbnail, lgFullscreen, lgAutoplay]}
           mode="lg-fade"

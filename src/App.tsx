@@ -12,6 +12,8 @@ import Home from "./pages/Home";
 import Gallery from "./pages/Gallery";
 import Offers from "./pages/Offers";
 import ProductsPage from "./pages/ProductsPage";
+// import BackToTop from "./components/ui/BackToTop";
+import WhatsApp from "./components/ui/WhatsApp";
 
 const App: React.FC = () => {
   return (
@@ -26,6 +28,8 @@ const App: React.FC = () => {
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <Footer />
+        {/* <BackToTop /> */}
+        <WhatsApp />
       </Router>
     </>
   );
